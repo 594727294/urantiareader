@@ -1,14 +1,24 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+  <p>UrantiaBook v.1</p>
 </ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <p class="verPartes" (click)="toggleGroup('partess')">Open Book</p>
+  <div class="partes" *ngIf="isGroupShown('partess')">
+    <div class="parte">
+      <p class="titulo">
+        Parts
+      </p>
+    </div>
+    <div [navPush]="paginaPapers" class="parte" *ngFor="let part of libro.parts | jsonPiper" attr.data-start="{{part.value.pstart}}" attr.data-end="{{part.value.pend}}">
+      <p class="titulo">
+        {{part.value.title}}
+      </p>
+      <p class="autor">
+        {{part.value.authors}}
+      </p>
+    </div>
+  </div>
 </ion-content>
+<ion-footer>
+  <p>UrantiaBook v.1</p>
+</ion-footer>

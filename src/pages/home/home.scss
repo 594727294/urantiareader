@@ -1,3 +1,25 @@
 page-home {
-
+  .verPartes{
+    cursor:pointer;
+    margin:0;
+    padding:1rem;
+    border-bottom:1px solid rgb(215, 215, 215);
+  }
+  .partes{
+    .parte{
+      padding:1.5rem 1rem;
+      border-bottom:1px solid rgb(215, 215, 215);
+      p{
+        margin:0;
+      }
+      .titulo{
+        font-size: 16px;
+        font-weight:bold;
+      }
+      .autor{
+        font-size:12px;
+        font-style: italic;
+      }
+    }
+  }
 }
